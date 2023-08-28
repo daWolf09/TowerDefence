@@ -4,7 +4,7 @@
 PWD: Leo_Leon08.09
 
 
-12_Wörter:
+Recovery Words:
 1cannon
 2absurd
 3promote
