@@ -2,4 +2,6 @@
 
 Website Link: https://dawolf09.github.io/TowerDefence/
 
-<button class="button" type="submit">Post comment (button)</button>
+
+<a class="btn" href="https://sentry.io/answers/">Answers by Sentry</a>
+
