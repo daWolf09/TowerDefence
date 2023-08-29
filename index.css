@@ -1,0 +1,51 @@
+.LEO {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.LEO:hover {
+  background-color: #2980b9;
+}
+
+.walletInfo {
+  display: flex;
+  align-items: center;
+}
+
+.smallButton {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  transform: translateY(2px);
+  cursor: pointer;
+}
+
+.smallButton:hover {
+  background-color: #2980b9;
+}
+
+.LEO.flashing {
+  animation: flashingEffect 1s infinite alternate;
+}
+
+@keyframes flashingEffect {
+  0% {
+    background-color: #3498db;
+  }
+  100% {
+    background-color: #FFD700; /* Ändere dies auf die gewünschte hervorstechende Farbe */
+  }
+}
