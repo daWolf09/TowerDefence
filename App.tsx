@@ -1,3 +1,4 @@
+//-----------------------------------------------------------------JAVASCRIPT--------------------------------------------------------------------------------------------------
 import React, { useState, useEffect } from "react";
 import { useEthers, useLookupAddress } from "@usedapp/core";
 import { abis, addresses } from "@my-app/contracts";
@@ -47,12 +48,22 @@ function WalletButton() {
 
 function App() {
   return (
+    
+    
+
     <div className="container">
+      <img className="flying-image" src="https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/NEW_ZOMBIE_nobg.png"></img>
       <div className="header">
         <WalletButton />
       </div>
     </div>
+    
   );
+}
+
+
+
+export default App;
 }
 
 export default App;
