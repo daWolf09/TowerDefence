@@ -46,6 +46,65 @@
     background-color: #3498db;
   }
   100% {
-    background-color: #FFD700; /* Ändere dies auf die gewünschte hervorstechende Farbe */
+    background-color: #a38c0b; 
+  }
+}
+body {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Tower_Defense_Map.png");
+  background-size: cover; 
+}
+.flying-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: flyAnimation 15s linear infinite;
+  width: 50px; /* Ändere die Breite des Bilds */
+  height: auto; /* Die Höhe passt sich automatisch an die Breite an */
+}
+@keyframes flyAnimation {
+  0% {
+    right: 100%; /* Startposition: Bild außerhalb des linken Bildschirmrands */
+    top: 24%; /* Startposition: vertikal zentriert */
+    transform: translateY(0); /* Keine vertikale Verschiebung zu Beginn */
+  }
+  12.5% {
+    right: calc(80% + 10px); /* 50px nach vorne fliegen */
+    top: 23.5%; /* Beibehaltung der vertikalen Position */
+    transform: translateY(0); /* Keine vertikale Verschiebung */
+  }
+  25% {
+    right: calc(78% + 10px); /* Beibehaltung der horizontalen Position */
+    top: 80%; /* 30% nach unten fliegen */
+    transform: translateY(0); /* Keine vertikale Verschiebung */
+  }
+  37.5% {
+    right: calc(50% + 10px); /* Beibehaltung der horizontalen Position */
+    top: 80%; /* Beibehaltung der vertikalen Position */
+    transform: translateY(0); /* Keine vertikale Verschiebung */
+  }
+  50% {
+    right: calc(50% + 10px); 
+    top: 24%; 
+    transform: translateY(-50%); 
+  }
+  62.5% {
+    right: calc(36% + 10px); 
+    top: 24%; 
+    transform: translateY(-50%); 
+  }
+  75% {
+    right: calc(36% + 10px); 
+    top: 80%; 
+    transform: translateY(-50%); 
+  }
+  87.5% {
+    right: calc(10% + 10px); 
+    top: 80%; 
+    transform: translateY(-50%); 
+  }
+  100% {
+    right: calc(10% + 10px); 
+    top:40%; 
+    transform: translateY(-50%); 
   }
 }
