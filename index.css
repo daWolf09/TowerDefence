@@ -294,8 +294,8 @@
 }
 .BuildButton22{
   position: absolute;
-    top: 14.5%; /* Vertikale Position in Pixeln */
-    left: 0%; /* Horizontale Position in Pixeln */
+    top: 52%; /* Vertikale Position in Pixeln */
+    left: 51.5%; /* Horizontale Position in Pixeln */
   width: 80px;
   height: 80px;
   background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
@@ -318,8 +318,8 @@
 }
 .BuildButton24{
   position: absolute;
-    top: 14.5%; /* Vertikale Position in Pixeln */
-    left: 0%; /* Horizontale Position in Pixeln */
+    top: 62%; /* Vertikale Position in Pixeln */
+    left: 51.5%; /* Horizontale Position in Pixeln */
   width: 80px;
   height: 80px;
   background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
@@ -342,8 +342,8 @@
 }
 .BuildButton26{
   position: absolute;
-    top: 14.5%; /* Vertikale Position in Pixeln */
-    left: 0%; /* Horizontale Position in Pixeln */
+    top: 72%; /* Vertikale Position in Pixeln */
+    left: 51.5%; /* Horizontale Position in Pixeln */
   width: 80px;
   height: 80px;
   background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
@@ -366,8 +366,8 @@
 }
 .BuildButton28{
   position: absolute;
-    top: 14.5%; /* Vertikale Position in Pixeln */
-    left: 0%; /* Horizontale Position in Pixeln */
+    top: 82%; /* Vertikale Position in Pixeln */
+    left: 51.5%; /* Horizontale Position in Pixeln */
   width: 80px;
   height: 80px;
   background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
@@ -390,8 +390,8 @@
 }
 .BuildButton30{
   position: absolute;
-    top: 14.5%; /* Vertikale Position in Pixeln */
-    left: 0%; /* Horizontale Position in Pixeln */
+    top: 90%; /* Vertikale Position in Pixeln */
+    left: 58%; /* Horizontale Position in Pixeln */
   width: 80px;
   height: 80px;
   background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
@@ -404,6 +404,210 @@
   position: absolute;
     top: 14.5%; /* Vertikale Position in Pixeln */
     left: 0%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton32{
+  position: absolute;
+    top: 90%; /* Vertikale Position in Pixeln */
+    left: 63.5%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton33{
+  position: absolute;
+    top: 90%; /* Vertikale Position in Pixeln */
+    left: 58%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton34{
+  position: absolute;
+    top: 90%; /* Vertikale Position in Pixeln */
+    left: 69%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton35{
+  position: absolute;
+    top: 90%; /* Vertikale Position in Pixeln */
+    left: 58%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton36{
+  position: absolute;
+    top: 90%; /* Vertikale Position in Pixeln */
+    left: 74.5%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton37{
+  position: absolute;
+    top: 90%; /* Vertikale Position in Pixeln */
+    left: 58%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton38{
+  position: absolute;
+    top: 90%; /* Vertikale Position in Pixeln */
+    left: 80%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton39{
+  position: absolute;
+    top: 90%; /* Vertikale Position in Pixeln */
+    left: 58%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton40{
+  position: absolute;
+    top: 90%; /* Vertikale Position in Pixeln */
+    left: 85.5%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton41{
+  position: absolute;
+    top: 90%; /* Vertikale Position in Pixeln */
+    left: 85.5%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton41{
+  position: absolute;
+    top: 81%; /* Vertikale Position in Pixeln */
+    left: 91%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton42{
+  position: absolute;
+    top: 71%; /* Vertikale Position in Pixeln */
+    left: 91%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton43{
+  position: absolute;
+    top: 81%; /* Vertikale Position in Pixeln */
+    left: 91%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton44{
+  position: absolute;
+    top: 61%; /* Vertikale Position in Pixeln */
+    left: 91%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton45{
+  position: absolute;
+    top: 81%; /* Vertikale Position in Pixeln */
+    left: 91%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton46{
+  position: absolute;
+    top: 51%; /* Vertikale Position in Pixeln */
+    left: 91%; /* Horizontale Position in Pixeln */
+  width: 80px;
+  height: 80px;
+  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
+  background-size: cover; /* Bildgröße anpassen */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.BuildButton47{
+  position: absolute;
+    top: 81%; /* Vertikale Position in Pixeln */
+    left: 91%; /* Horizontale Position in Pixeln */
   width: 80px;
   height: 80px;
   background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
