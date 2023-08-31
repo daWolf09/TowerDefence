@@ -1,7 +1,7 @@
-//-----------------------------------------------------------------JAVASCRIPT--------------------------------------------------------------------------------------------------
 import React, { useState, useEffect } from "react";
 import { useEthers, useLookupAddress } from "@usedapp/core";
 import { abis, addresses } from "@my-app/contracts";
+import './index.css';
 
 function WalletButton() {
   const { account, activateBrowserWallet, deactivate } = useEthers();
@@ -45,15 +45,66 @@ function WalletButton() {
     </button>
   );
 }
-function Base_Build_request(pos: number){
+
+function Base_Build_request(pos: number) {
   alert(pos);
 }
 
+
+function Zombie({ index,despawntime}: { index: number,despawntime: number }) {
+  const [isFlying, setIsFlying] = useState(true);
+
+  useEffect(() => {
+    let animationTimeout: NodeJS.Timeout;
+
+    if (isFlying) {
+      animationTimeout = setTimeout(() => {
+        setIsFlying(false);
+      }, despawntime);
+    }
+
+    return () => clearTimeout(animationTimeout);
+  }, [isFlying]);
+
+  return (
+    <img
+      className={`flying-image ${!isFlying ? 'hide' : ''}`}
+      src="https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/NEW_ZOMBIE_nobg.png"
+      alt={`Flying Zombie ${index}`}
+    />
+  );
+}
+function handleButtonClick(buttonNum: number) {
+  const buttonID = `BuildButton${buttonNum}`;
+  const button = document.getElementsByClassName(buttonID)[0];
+  if (button) {
+    button.classList.add("clicked");
+  }
+}
 function App() {
+  const [zombies, setZombies] = useState<JSX.Element[]>([]);
+  const [isFlying, setIsFlying] = useState(false);
+  const [disabledButtons, setDisabledButtons] = useState<number[]>([]); // Zustand für deaktivierte Buttons
+
+  const spawnZombie = () => {
+    console.log("Spawn Zombie called"); // Überprüfen, ob die Funktion aufgerufen wird
+    //Todo:Smartcontract
+    setZombies([...zombies, <Zombie key={zombies.length} index={zombies.length} despawntime={50000} />]);
+  };
+  const handleBuildButtonClick = (buttonNum: number) => {
+    handleButtonClick(buttonNum);
+    
+  };
+
   return (
     <div className="container">
-      <body>
-        <button className="BuildButton1" onClick={() => Base_Build_request(1)}></button>
+      <div className="buttons-container">
+        <button className="startFlyingButton" onClick={() => {
+          spawnZombie()
+          setIsFlying(true)}}>
+          Start Flying hlllllllllllllllllllllllllllllllllllllllo
+        </button>
+        <button className={"BuildButton1"} onClick={() => handleBuildButtonClick(1)}></button>
         <button className="BuildButton2" onClick={() => Base_Build_request(2)}></button>
         <button className="BuildButton3" onClick={() => Base_Build_request(3)}></button>
         <button className="BuildButton4" onClick={() => Base_Build_request(4)}></button>
@@ -113,17 +164,25 @@ function App() {
         <button className="BuildButton58" onClick={() => Base_Build_request(58)}></button>
         <button className="BuildButton59" onClick={() => Base_Build_request(59)}></button>
         <button className="BuildButton60" onClick={() => Base_Build_request(60)}></button>
+        <button className="BuildButton61" onClick={() => Base_Build_request(61)}></button>
+        <button className="BuildButton62" onClick={() => Base_Build_request(62)}></button>
+        <button className="BuildButton63" onClick={() => Base_Build_request(63)}></button>
 
-      </body>
-      <img className="flying-image" src="https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/NEW_ZOMBIE_nobg.png"></img>
+
+      </div>
+
+      <div>
+        {zombies.map((zombie, index) => (
+          <Zombie key={index} index={index} despawntime={50000} />
+        ))}
+      </div>
+
       <div className="header">
         <WalletButton />
       </div>
     </div>
-    
   );
 }
 
-
-
 export default App;
+
