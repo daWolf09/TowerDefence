@@ -46,10 +46,6 @@ function WalletButton() {
   );
 }
 
-function Base_Build_request(pos: number) {
-  alert(pos);
-}
-
 
 function Zombie({ index,despawntime}: { index: number,despawntime: number }) {
   const [isFlying, setIsFlying] = useState(true);
@@ -74,13 +70,18 @@ function Zombie({ index,despawntime}: { index: number,despawntime: number }) {
     />
   );
 }
-function handleButtonClick(buttonNum: number) {
-  const buttonID = `BuildButton${buttonNum}`;
+function handleButtonClick(pos: number) {
+  const buttonID = `BuildButton${pos}`;
   const button = document.getElementsByClassName(buttonID)[0];
   if (button) {
     button.classList.add("clicked");
   }
 }
+function Base_Build_request(pos: number) {
+  handleButtonClick(pos);
+}
+
+
 function App() {
   const [zombies, setZombies] = useState<JSX.Element[]>([]);
   const [isFlying, setIsFlying] = useState(false);
@@ -104,7 +105,7 @@ function App() {
           setIsFlying(true)}}>
           Start Flying hlllllllllllllllllllllllllllllllllllllllo
         </button>
-        <button className={"BuildButton1"} onClick={() => handleBuildButtonClick(1)}></button>
+        <button className="BuildButton1" onClick={() => Base_Build_request(1)}></button>
         <button className="BuildButton2" onClick={() => Base_Build_request(2)}></button>
         <button className="BuildButton3" onClick={() => Base_Build_request(3)}></button>
         <button className="BuildButton4" onClick={() => Base_Build_request(4)}></button>
@@ -153,19 +154,19 @@ function App() {
         <button className="BuildButton47" onClick={() => Base_Build_request(47)}></button>
         <button className="BuildButton48" onClick={() => Base_Build_request(48)}></button>
         <button className="BuildButton49" onClick={() => Base_Build_request(49)}></button>
-        <button className="BuildButton50" onClick={() => Base_Build_request(50)}></button>
+      
         <button className="BuildButton51" onClick={() => Base_Build_request(51)}></button>
-        <button className="BuildButton52" onClick={() => Base_Build_request(52)}></button>
+   
         <button className="BuildButton53" onClick={() => Base_Build_request(53)}></button>
-        <button className="BuildButton54" onClick={() => Base_Build_request(54)}></button>
+       
         <button className="BuildButton55" onClick={() => Base_Build_request(55)}></button>
-        <button className="BuildButton56" onClick={() => Base_Build_request(56)}></button>
+        
         <button className="BuildButton57" onClick={() => Base_Build_request(57)}></button>
-        <button className="BuildButton58" onClick={() => Base_Build_request(58)}></button>
+       
         <button className="BuildButton59" onClick={() => Base_Build_request(59)}></button>
-        <button className="BuildButton60" onClick={() => Base_Build_request(60)}></button>
+        
         <button className="BuildButton61" onClick={() => Base_Build_request(61)}></button>
-        <button className="BuildButton62" onClick={() => Base_Build_request(62)}></button>
+        
         <button className="BuildButton63" onClick={() => Base_Build_request(63)}></button>
 
 
@@ -185,4 +186,3 @@ function App() {
 }
 
 export default App;
-
