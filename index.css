@@ -54,10 +54,6 @@
   background-size:contain;
   background-repeat: no-repeat;
 }
-.BuildButton1.clicked {
-  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
-  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
-}
 .BuildButton2{
   position: absolute;
     top: 33.5%; /* Vertikale Position in Pixeln */
@@ -70,6 +66,7 @@
   cursor: pointer;
   background-color: transparent;
 }
+
 .BuildButton3{
   position: absolute;
     top: 14.5%; /* Vertikale Position in Pixeln */
@@ -636,19 +633,6 @@
   background-color: transparent;
 }
 
-
-.BuildButton50{
-  position: absolute;
-    top: 0%; /* Vertikale Position in Pixeln */
-    left: 0%; /* Horizontale Position in Pixeln */
-  width: 80px;
-  height: 80px;
-  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
-  background-size: cover; /* Bildgröße anpassen */
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-}
 .BuildButton51{
   position: absolute;
     top: 59%; /* Vertikale Position in Pixeln */
@@ -661,18 +645,8 @@
   cursor: pointer;
   background-color: transparent;
 }
-.BuildButton52{
-  position: absolute;
-    top: 0%; /* Vertikale Position in Pixeln */
-    left: 0%; /* Horizontale Position in Pixeln */
-  width: 80px;
-  height: 80px;
-  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
-  background-size: cover; /* Bildgröße anpassen */
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-}
+
+
 .BuildButton53{
   position: absolute;
     top: 68%; /* Vertikale Position in Pixeln */
@@ -685,18 +659,7 @@
   cursor: pointer;
   background-color: transparent;
 }
-.BuildButton54{
-  position: absolute;
-    top: 0%; /* Vertikale Position in Pixeln */
-    left: 0%; /* Horizontale Position in Pixeln */
-  width: 80px;
-  height: 80px;
-  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
-  background-size: cover; /* Bildgröße anpassen */
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-}
+
 .BuildButton55{
   position: absolute;
     top: 68%; /* Vertikale Position in Pixeln */
@@ -709,18 +672,7 @@
   cursor: pointer;
   background-color: transparent;
 }
-.BuildButton56{
-  position: absolute;
-    top: 0%; /* Vertikale Position in Pixeln */
-    left: 0%; /* Horizontale Position in Pixeln */
-  width: 80px;
-  height: 80px;
-  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
-  background-size: cover; /* Bildgröße anpassen */
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-}
+
 .BuildButton57{
   position: absolute;
     top: 68%; /* Vertikale Position in Pixeln */
@@ -733,18 +685,7 @@
   cursor: pointer;
   background-color: transparent;
 }
-.BuildButton58{
-  position: absolute;
-    top: 0%; /* Vertikale Position in Pixeln */
-    left: 0%; /* Horizontale Position in Pixeln */
-  width: 80px;
-  height: 80px;
-  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
-  background-size: cover; /* Bildgröße anpassen */
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-}
+
 .BuildButton59{
   position: absolute;
   top: 68%; /* Vertikale Position in Pixeln */
@@ -757,18 +698,7 @@
   cursor: pointer;
   background-color: transparent;
 }
-.BuildButton60{
-  position: absolute;
-  top: 0%; /* Vertikale Position in Pixeln */
-  left: 0%;/* Horizontale Position in Pixeln */
-  width: 80px;
-  height: 80px;
-  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
-  background-size: cover; /* Bildgröße anpassen */
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-}
+
 .BuildButton61{
   position: absolute;
   top: 58%; /* Vertikale Position in Pixeln */
@@ -781,18 +711,7 @@
   cursor: pointer;
   background-color: transparent;
 }
-.BuildButton62{
-  position: absolute;
-  top: 0%; /* Vertikale Position in Pixeln */
-  left: 0%;/* Horizontale Position in Pixeln */
-  width: 80px;
-  height: 80px;
-  background-image: url('https://raw.githubusercontent.com/daWolf09/TowerDefence/main/TowerDefence/builld_icon.png'); /* Passe den Pfad zum Bild an */
-  background-size: cover; /* Bildgröße anpassen */
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-}
+
 .BuildButton63{
   position: absolute;
   top: 48%; /* Vertikale Position in Pixeln */
@@ -806,6 +725,231 @@
   background-color: transparent;
 }
 
+/*------------------------------clicked.-----------------------------------------------*/
+.BuildButton1.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton2.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton3.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton4.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton5.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton6.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton7.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton8.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton9.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton10.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton11.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton12.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton13.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton14.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton15.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton16.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton17.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton18.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton19.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton20.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton21.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton22.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton23.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton24.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton25.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton26.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton27.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton28.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton29.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton30.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton31.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton32.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton33.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton34.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton35.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton36.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton37.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton38.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton39.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton40.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton41.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton42.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton43.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton44.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton45.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton46.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton47.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton48.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton49.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton51.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton53.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton55.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton57.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton59.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton61.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
+.BuildButton63.clicked {
+  background-image: url("https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/Turrent.gif");
+  pointer-events: none; /* Deaktiviert das Klicken nach dem Klick */
+}
 
 
 
