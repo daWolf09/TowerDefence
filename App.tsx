@@ -82,11 +82,15 @@ function Base_Build_request(pos: number) {
 }
 
 
+
 function App() {
+  const healthPercentage = 5; // Setze den Gesundheitsprozentsatz hier
+  const isMediumHealth = healthPercentage >= 30 && healthPercentage <= 50;
+  const isLowHealth = healthPercentage < 30;
   const [zombies, setZombies] = useState<JSX.Element[]>([]);
   const [isFlying, setIsFlying] = useState(false);
   const [disabledButtons, setDisabledButtons] = useState<number[]>([]); // Zustand für deaktivierte Buttons
-
+  const WaveState = "Wave in Progress";
   const spawnZombie = () => {
     console.log("Spawn Zombie called"); // Überprüfen, ob die Funktion aufgerufen wird
     //Todo:Smartcontract
@@ -96,14 +100,20 @@ function App() {
     handleButtonClick(buttonNum);
     
   };
-
+  
   return (
     <div className="container">
+            <div className={`health-bar ${isLowHealth ? 'low-health' : ''} ${isMediumHealth ? 'medium-health' : ''}`}>
+            <div className="health" style={{ width: `${healthPercentage}%` }}></div>
+            <span className="health-text">{healthPercentage}%</span>
+    </div>
+        <span className="WaveStatecss">{WaveState}</span>
       <div className="buttons-container">
         <button className="startFlyingButton" onClick={() => {
+          
           spawnZombie()
           setIsFlying(true)}}>
-          Start Flying hlllllllllllllllllllllllllllllllllllllllo
+          Start Flying
         </button>
         <button className="BuildButton1" onClick={() => Base_Build_request(1)}></button>
         <button className="BuildButton2" onClick={() => Base_Build_request(2)}></button>
