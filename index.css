@@ -1031,7 +1031,7 @@ body, html {
   top: 50%;
   right: 110%;
   transform: translateY(-50%);
-  animation: flyAnimation 15s linear backwards;
+  animation: flyAnimation 18.5s linear backwards;
   width: 50px; /* Ändere die Breite des Bilds */
   height: auto; /* Die Höhe passt sich automatisch an die Breite an */
 }
