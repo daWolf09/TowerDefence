@@ -47,7 +47,7 @@ function WalletButton() {
 }
 
 
-function Zombie({ index,despawntime}: { index: number,despawntime: number }) {
+function Zombie({ index, despawntime }: { index: number, despawntime: number }) {
   const [isFlying, setIsFlying] = useState(true);
 
   useEffect(() => {
@@ -64,6 +64,7 @@ function Zombie({ index,despawntime}: { index: number,despawntime: number }) {
 
   return (
     <img
+      id={index.toString()}
       className={`flying-image ${!isFlying ? 'hide' : ''}`}
       src="https://raw.githubusercontent.com/daWolf09/TowerDefence/main/Pixelart%20Parts/NEW_ZOMBIE_nobg.png"
       alt={`Flying Zombie ${index}`}
@@ -77,9 +78,7 @@ function handleButtonClick(pos: number) {
     button.classList.add("clicked");
   }
 }
-function Base_Build_request(pos: number) {
-  handleButtonClick(pos);
-}
+
 
 
 
@@ -88,34 +87,64 @@ function App() {
   const isMediumHealth = healthPercentage >= 30 && healthPercentage <= 50;
   const isLowHealth = healthPercentage < 30;
   const [zombies, setZombies] = useState<JSX.Element[]>([]);
+  const [bases, setBases] = useState<JSX.Element[]>([]);
   const [isFlying, setIsFlying] = useState(false);
+  const [despawntime, setdespawntime] = useState(5000)
   const [disabledButtons, setDisabledButtons] = useState<number[]>([]); // Zustand für deaktivierte Buttons
   const WaveState = "Wave in Progress";
   const spawnZombie = () => {
     console.log("Spawn Zombie called"); // Überprüfen, ob die Funktion aufgerufen wird
     //Todo:Smartcontract
-    setZombies([...zombies, <Zombie key={zombies.length} index={zombies.length} despawntime={50000} />]);
+    setZombies([...zombies, <Zombie key={zombies.length} index={zombies.length} despawntime={despawntime} />]);
   };
   const handleBuildButtonClick = (buttonNum: number) => {
     handleButtonClick(buttonNum);
-    
+
   };
+
+  const Base_Build_request = (pos: number) => {
+    handleButtonClick(pos);
+    // find ref in dom = newBase
+    // setBases([...bases, newBase])
+  }
   
+
+  function zombiestart(despawnit: number) {
+    setdespawntime(despawnit)
+    spawnZombie();
+    setIsFlying(true);
+  }
+
+  const calculateCollision = () => {
+    // alle basen laden
+    // alle zombies laden
+    const allBases = [];
+    const allPlayers = [...zombies];
+    // game collision loop
+    for (let base = 0; base < allBases.length; base++) {
+      for (let player = 0; player < allPlayers.length; player++) {
+        // jede base hat eine collision area
+        // jeder zombie hat eine collision area
+        // getBoundingClientRect() allBases[base] und allPlayers[player] definieren
+        // collision prüfen
+        // https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
+      }
+    }
+  }
+
+
   return (
     <div className="container">
-            <div className={`health-bar ${isLowHealth ? 'low-health' : ''} ${isMediumHealth ? 'medium-health' : ''}`}>
-            <div className="health" style={{ width: `${healthPercentage}%` }}></div>
-            <span className="health-text">{healthPercentage}%</span>
-    </div>
-        <span className="WaveStatecss">{WaveState}</span>
+      <div className={`health-bar ${isLowHealth ? 'low-health' : ''} ${isMediumHealth ? 'medium-health' : ''}`}>
+        <div className="health" style={{ width: `${healthPercentage}%` }}></div>
+        <span className="health-text">{healthPercentage}%</span>
+      </div>
+      <span className="WaveStatecss">{WaveState}</span>
       <div className="buttons-container">
-        <button className="startFlyingButton" onClick={() => {
-          
-          spawnZombie()
-          setIsFlying(true)}}>
+        <button className="startFlyingButton" onClick={() => zombiestart(10000)}>
           Start Flying
         </button>
-        <button className="BuildButton1" onClick={() => Base_Build_request(1)}></button>
+        <button  className="BuildButton1" onClick={() => Base_Build_request(1)}></button>
         <button className="BuildButton2" onClick={() => Base_Build_request(2)}></button>
         <button className="BuildButton3" onClick={() => Base_Build_request(3)}></button>
         <button className="BuildButton4" onClick={() => Base_Build_request(4)}></button>
@@ -164,19 +193,19 @@ function App() {
         <button className="BuildButton47" onClick={() => Base_Build_request(47)}></button>
         <button className="BuildButton48" onClick={() => Base_Build_request(48)}></button>
         <button className="BuildButton49" onClick={() => Base_Build_request(49)}></button>
-      
+
         <button className="BuildButton51" onClick={() => Base_Build_request(51)}></button>
-   
+
         <button className="BuildButton53" onClick={() => Base_Build_request(53)}></button>
-       
+
         <button className="BuildButton55" onClick={() => Base_Build_request(55)}></button>
-        
+
         <button className="BuildButton57" onClick={() => Base_Build_request(57)}></button>
-       
+
         <button className="BuildButton59" onClick={() => Base_Build_request(59)}></button>
-        
+
         <button className="BuildButton61" onClick={() => Base_Build_request(61)}></button>
-        
+
         <button className="BuildButton63" onClick={() => Base_Build_request(63)}></button>
 
 
@@ -184,7 +213,7 @@ function App() {
 
       <div>
         {zombies.map((zombie, index) => (
-          <Zombie key={index} index={index} despawntime={50000} />
+          <Zombie key={index} index={index} despawntime={despawntime} />
         ))}
       </div>
 
