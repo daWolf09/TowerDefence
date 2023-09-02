@@ -1,7 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useEthers, useLookupAddress } from "@usedapp/core";
 import { abis, addresses } from "@my-app/contracts";
 import './index.css';
+import{GetBaseLocation} from "./BaseLocations"
+
+function getButtonCoordinates(pos: number) {
+  const buttonID = `BuildButton${pos}`;
+  const button = document.getElementById(buttonID);
+  if (button) {
+    const rect = button.getBoundingClientRect();
+    console.log(`Koordinaten von ${buttonID}: Top: ${rect.top}, Left: ${rect.left}`);
+  }
+}
 
 function WalletButton() {
   const { account, activateBrowserWallet, deactivate } = useEthers();
@@ -83,6 +93,27 @@ function handleButtonClick(pos: number) {
 
 
 function App() {
+  const zombiePositions = useRef<{ x: number; y: number }[]>([]);
+  
+  const handleBuildButtonClick = (pos: number) => {
+    handleButtonClick(pos);
+    getButtonCoordinates(pos);
+  };
+  
+  const [buttonCoordinates, setButtonCoordinates] = useState<{ id: string, x: number, y: number }[]>([]);
+  const getButtonCoordinates = (pos: number) => {
+    const buttonID = `BuildButton${pos}`;
+    const button = document.getElementById(buttonID);
+    if (button) {
+      const rect = button.getBoundingClientRect();
+      const coordinates = { id: buttonID, x: rect.left, y: rect.top };
+      setButtonCoordinates([...buttonCoordinates, coordinates]);
+      console.log(`Koordinaten von ${buttonID}: Top: ${rect.top}, Left: ${rect.left}`);
+      console.log(buttonCoordinates); // Hier den Array in der Konsole ausgeben
+    }
+  };
+  
+  
   const healthPercentage = 5; // Setze den Gesundheitsprozentsatz hier
   const isMediumHealth = healthPercentage >= 30 && healthPercentage <= 50;
   const isLowHealth = healthPercentage < 30;
@@ -92,65 +123,50 @@ function App() {
   const [despawntime, setdespawntime] = useState(5000)
   const [disabledButtons, setDisabledButtons] = useState<number[]>([]); // Zustand für deaktivierte Buttons
   const WaveState = "Wave in Progress";
-  const spawnZombie = () => {
+  const spawnZombieCheck = () => {
     console.log("Spawn Zombie called"); // Überprüfen, ob die Funktion aufgerufen wird
     //Todo:Smartcontract
     setZombies([...zombies, <Zombie key={zombies.length} index={zombies.length} despawntime={despawntime} />]);
   };
-  const handleBuildButtonClick = (buttonNum: number) => {
-    handleButtonClick(buttonNum);
-
-  };
+  
 
   const Base_Build_request = (pos: number) => {
     handleButtonClick(pos);
-    // find ref in dom = newBase
-    // setBases([...bases, newBase])
+    getButtonCoordinates(pos); // Aufruf der Funktion, um die Koordinaten zu erhalten
+  // find ref in dom = newBase
+  // setBases([...bases, newBase])
   }
   
 
   function zombiestart(despawnit: number) {
     setdespawntime(despawnit)
-    spawnZombie();
+    spawnZombieCheck();
     setIsFlying(true);
   }
+  function spawnZombie() {
+    const zombiePosition = { x:0, y:0};
+    zombiePositions.current.push(zombiePosition);
+  }
 
-  const calculateCollision = () => {
-    // alle basen laden
-    // alle zombies laden
-    const allBases = [];
-    const allPlayers = [...zombies];
-    // game collision loop
-    for (let base = 0; base < allBases.length; base++) {
-      for (let player = 0; player < allPlayers.length; player++) {
-        // jede base hat eine collision area
-        // jeder zombie hat eine collision area
-        // getBoundingClientRect() allBases[base] und allPlayers[player] definieren
-        // collision prüfen
-        // https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
+  function calculateCollision() {
+    for (let baseIndex = 0; baseIndex < GetBaseLocation.length; baseIndex++) {
+      const base = GetBaseLocation[baseIndex];
+      const baseX = base.x;
+      const baseY = base.y;
+  
+      for (let i = 0; i < zombiePositions.current.length; i++) {
+        const zombiePosition = zombiePositions.current[i];
+        const distance = Math.sqrt(
+          (baseX - zombiePosition.x) ** 2 + (baseY - zombiePosition.y) ** 2
+        );
+  
+        if (distance <= 100) {
+          // Kollision zwischen Basis und Zombie
+          console.log('Kollision zwischen Basis und Zombie');
+        }
       }
     }
   }
-  function getButtonPositions() {
-    const buttonElements = document.querySelectorAll('.BuildButton'); // Wählen Sie alle Buttons mit der Klasse "BuildButton"
-    const positions = [];
-  
-    buttonElements.forEach((button) => {
-      const id = button.id.split('-')[1]; // Extrahieren Sie die ID des Buttons aus der ID im Format "BuildButton-X"
-      const style = getComputedStyle(button); // Holen Sie sich die berechneten CSS-Stile des Buttons
-  
-      const x = parseInt(style.left, 10); // Extrahieren Sie die X-Position aus den CSS-Stilen und wandeln Sie sie in eine ganze Zahl um
-      const y = parseInt(style.top, 10); // Extrahieren Sie die Y-Position aus den CSS-Stilen und wandeln Sie sie in eine ganze Zahl um
-  
-      positions.push({ id: parseInt(id, 10), x, y });
-    });
-  
-
-  }
-  
-  // Beispielaufruf der Funktion und Ausgabe in der Konsole
-  const buttonPositions = getButtonPositions();
-  console.log(buttonPositions);
   
 
   return (
@@ -158,7 +174,7 @@ function App() {
       <div className={`health-bar ${isLowHealth ? 'low-health' : ''} ${isMediumHealth ? 'medium-health' : ''}`}>
         <div className="health" style={{ width: `${healthPercentage}%` }}></div>
         <span className="health-text">{healthPercentage}%</span>
-      </div>
+        </div>
       <span className="WaveStatecss">{WaveState}</span>
       <div className="buttons-container">
         <button className="startFlyingButton" onClick={() => zombiestart(10000)}>
@@ -227,6 +243,7 @@ function App() {
         <button id="BuildButton61" className="BuildButton61" onClick={() => Base_Build_request(61)}></button>
 
         <button id="BuildButton63" className="BuildButton63" onClick={() => Base_Build_request(63)}></button>
+
 
 
       </div>
